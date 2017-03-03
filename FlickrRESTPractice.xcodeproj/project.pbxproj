@@ -18,6 +18,8 @@
 		0BBB43651E6A263B00B84B0D /* ToDo.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 0BBB43641E6A263B00B84B0D /* ToDo.rtf */; };
 		0BBB43681E6A293900B84B0D /* FetchData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BBB43671E6A293900B84B0D /* FetchData.m */; };
 		0BBB436B1E6A2E7D00B84B0D /* TopPlacesTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BBB436A1E6A2E7D00B84B0D /* TopPlacesTVC.m */; };
+		0BBB43741E6A315400B84B0D /* PlaceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BBB43721E6A315400B84B0D /* PlaceCell.m */; };
+		0BBB43751E6A315400B84B0D /* PlaceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BBB43731E6A315400B84B0D /* PlaceCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,9 @@
 		0BBB43671E6A293900B84B0D /* FetchData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FetchData.m; path = Model/FetchData.m; sourceTree = "<group>"; };
 		0BBB43691E6A2E7D00B84B0D /* TopPlacesTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopPlacesTVC.h; sourceTree = "<group>"; };
 		0BBB436A1E6A2E7D00B84B0D /* TopPlacesTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopPlacesTVC.m; sourceTree = "<group>"; };
+		0BBB43711E6A315400B84B0D /* PlaceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlaceCell.h; path = Views/PlaceCell.h; sourceTree = "<group>"; };
+		0BBB43721E6A315400B84B0D /* PlaceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlaceCell.m; path = Views/PlaceCell.m; sourceTree = "<group>"; };
+		0BBB43731E6A315400B84B0D /* PlaceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PlaceCell.xib; path = Views/PlaceCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +80,7 @@
 				0BBB43691E6A2E7D00B84B0D /* TopPlacesTVC.h */,
 				0BBB436A1E6A2E7D00B84B0D /* TopPlacesTVC.m */,
 				0BB146C81E69FBBA000C37B2 /* Main.storyboard */,
-				0BB146CB1E69FBBA000C37B2 /* FlickrRESTPractice.xcdatamodeld */,
+				0BBB43761E6A315E00B84B0D /* Views */,
 				0BB146E31E6A19C4000C37B2 /* Model */,
 				0BB146DF1E69FC99000C37B2 /* Core Data Model */,
 				0BB146BF1E69FBBA000C37B2 /* Supporting Files */,
@@ -99,6 +104,7 @@
 		0BB146DF1E69FC99000C37B2 /* Core Data Model */ = {
 			isa = PBXGroup;
 			children = (
+				0BB146CB1E69FBBA000C37B2 /* FlickrRESTPractice.xcdatamodeld */,
 				0BB146DB1E69FC91000C37B2 /* Person+CoreDataProperties.h */,
 				0BB146DC1E69FC91000C37B2 /* Person+CoreDataProperties.m */,
 			);
@@ -114,6 +120,16 @@
 				0BB146E11E6A19BD000C37B2 /* FlickrURL.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		0BBB43761E6A315E00B84B0D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0BBB43711E6A315400B84B0D /* PlaceCell.h */,
+				0BBB43721E6A315400B84B0D /* PlaceCell.m */,
+				0BBB43731E6A315400B84B0D /* PlaceCell.xib */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,6 +193,7 @@
 				0BBB43651E6A263B00B84B0D /* ToDo.rtf in Resources */,
 				0BB146D21E69FBBA000C37B2 /* LaunchScreen.storyboard in Resources */,
 				0BB146CF1E69FBBA000C37B2 /* Assets.xcassets in Resources */,
+				0BBB43751E6A315400B84B0D /* PlaceCell.xib in Resources */,
 				0BB146CA1E69FBBA000C37B2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -191,6 +208,7 @@
 				0BBB43681E6A293900B84B0D /* FetchData.m in Sources */,
 				0BB146E21E6A19BD000C37B2 /* FlickrURL.m in Sources */,
 				0BB146C41E69FBBA000C37B2 /* AppDelegate.m in Sources */,
+				0BBB43741E6A315400B84B0D /* PlaceCell.m in Sources */,
 				0BB146C11E69FBBA000C37B2 /* main.m in Sources */,
 				0BB146DE1E69FC91000C37B2 /* Person+CoreDataProperties.m in Sources */,
 				0BBB436B1E6A2E7D00B84B0D /* TopPlacesTVC.m in Sources */,
