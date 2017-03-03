@@ -21,4 +21,10 @@
     return [NSURL URLWithString:query];
 }
 
++ (NSURL *)URLforTopPlacesList
+
+{
+    return [self genericURLForQuery:@"http://api.flickr.com/services/rest/?method=flickr.places.getTopPlacesList&place_type_id=7"];
+}
+
 @end

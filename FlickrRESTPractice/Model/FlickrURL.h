@@ -11,4 +11,7 @@
 @interface FlickrURL : NSObject
 
 
+
++ (NSURL *)URLforTopPlacesList;
+
 @end
