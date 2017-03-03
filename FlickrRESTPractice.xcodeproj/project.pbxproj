@@ -13,6 +13,9 @@
 		0BB146CD1E69FBBA000C37B2 /* FlickrRESTPractice.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0BB146CB1E69FBBA000C37B2 /* FlickrRESTPractice.xcdatamodeld */; };
 		0BB146CF1E69FBBA000C37B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BB146CE1E69FBBA000C37B2 /* Assets.xcassets */; };
 		0BB146D21E69FBBA000C37B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BB146D01E69FBBA000C37B2 /* LaunchScreen.storyboard */; };
+		0BB146DD1E69FC91000C37B2 /* Person+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BB146DA1E69FC91000C37B2 /* Person+CoreDataClass.m */; };
+		0BB146DE1E69FC91000C37B2 /* Person+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BB146DC1E69FC91000C37B2 /* Person+CoreDataProperties.m */; };
+		0BB146E21E6A19BD000C37B2 /* FlickrURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BB146E11E6A19BD000C37B2 /* FlickrURL.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +28,12 @@
 		0BB146CE1E69FBBA000C37B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0BB146D11E69FBBA000C37B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0BB146D31E69FBBA000C37B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0BB146D91E69FC91000C37B2 /* Person+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Person+CoreDataClass.h"; path = "CoreDataModel/Person+CoreDataClass.h"; sourceTree = "<group>"; };
+		0BB146DA1E69FC91000C37B2 /* Person+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Person+CoreDataClass.m"; path = "CoreDataModel/Person+CoreDataClass.m"; sourceTree = "<group>"; };
+		0BB146DB1E69FC91000C37B2 /* Person+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Person+CoreDataProperties.h"; path = "CoreDataModel/Person+CoreDataProperties.h"; sourceTree = "<group>"; };
+		0BB146DC1E69FC91000C37B2 /* Person+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Person+CoreDataProperties.m"; path = "CoreDataModel/Person+CoreDataProperties.m"; sourceTree = "<group>"; };
+		0BB146E01E6A19BD000C37B2 /* FlickrURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlickrURL.h; path = Model/FlickrURL.h; sourceTree = "<group>"; };
+		0BB146E11E6A19BD000C37B2 /* FlickrURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FlickrURL.m; path = Model/FlickrURL.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,10 +66,10 @@
 		0BB146BE1E69FBBA000C37B2 /* FlickrRESTPractice */ = {
 			isa = PBXGroup;
 			children = (
-				0BB146C21E69FBBA000C37B2 /* AppDelegate.h */,
-				0BB146C31E69FBBA000C37B2 /* AppDelegate.m */,
 				0BB146C81E69FBBA000C37B2 /* Main.storyboard */,
 				0BB146CB1E69FBBA000C37B2 /* FlickrRESTPractice.xcdatamodeld */,
+				0BB146E31E6A19C4000C37B2 /* Model */,
+				0BB146DF1E69FC99000C37B2 /* Core Data Model */,
 				0BB146BF1E69FBBA000C37B2 /* Supporting Files */,
 			);
 			path = FlickrRESTPractice;
@@ -69,12 +78,34 @@
 		0BB146BF1E69FBBA000C37B2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0BB146C21E69FBBA000C37B2 /* AppDelegate.h */,
+				0BB146C31E69FBBA000C37B2 /* AppDelegate.m */,
 				0BB146CE1E69FBBA000C37B2 /* Assets.xcassets */,
 				0BB146D31E69FBBA000C37B2 /* Info.plist */,
 				0BB146D01E69FBBA000C37B2 /* LaunchScreen.storyboard */,
 				0BB146C01E69FBBA000C37B2 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0BB146DF1E69FC99000C37B2 /* Core Data Model */ = {
+			isa = PBXGroup;
+			children = (
+				0BB146D91E69FC91000C37B2 /* Person+CoreDataClass.h */,
+				0BB146DA1E69FC91000C37B2 /* Person+CoreDataClass.m */,
+				0BB146DB1E69FC91000C37B2 /* Person+CoreDataProperties.h */,
+				0BB146DC1E69FC91000C37B2 /* Person+CoreDataProperties.m */,
+			);
+			name = "Core Data Model";
+			sourceTree = "<group>";
+		};
+		0BB146E31E6A19C4000C37B2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0BB146E01E6A19BD000C37B2 /* FlickrURL.h */,
+				0BB146E11E6A19BD000C37B2 /* FlickrURL.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,8 +179,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BB146E21E6A19BD000C37B2 /* FlickrURL.m in Sources */,
+				0BB146DD1E69FC91000C37B2 /* Person+CoreDataClass.m in Sources */,
 				0BB146C41E69FBBA000C37B2 /* AppDelegate.m in Sources */,
 				0BB146C11E69FBBA000C37B2 /* main.m in Sources */,
+				0BB146DE1E69FC91000C37B2 /* Person+CoreDataProperties.m in Sources */,
 				0BB146CD1E69FBBA000C37B2 /* FlickrRESTPractice.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
