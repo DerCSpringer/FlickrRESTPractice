@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		0BB146C11E69FBBA000C37B2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BB146C01E69FBBA000C37B2 /* main.m */; };
 		0BB146C41E69FBBA000C37B2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BB146C31E69FBBA000C37B2 /* AppDelegate.m */; };
-		0BB146C71E69FBBA000C37B2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BB146C61E69FBBA000C37B2 /* ViewController.m */; };
 		0BB146CA1E69FBBA000C37B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BB146C81E69FBBA000C37B2 /* Main.storyboard */; };
 		0BB146CD1E69FBBA000C37B2 /* FlickrRESTPractice.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0BB146CB1E69FBBA000C37B2 /* FlickrRESTPractice.xcdatamodeld */; };
 		0BB146CF1E69FBBA000C37B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BB146CE1E69FBBA000C37B2 /* Assets.xcassets */; };
@@ -21,8 +20,6 @@
 		0BB146C01E69FBBA000C37B2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0BB146C21E69FBBA000C37B2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0BB146C31E69FBBA000C37B2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		0BB146C51E69FBBA000C37B2 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		0BB146C61E69FBBA000C37B2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		0BB146C91E69FBBA000C37B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0BB146CC1E69FBBA000C37B2 /* FlickrRESTPractice.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FlickrRESTPractice.xcdatamodel; sourceTree = "<group>"; };
 		0BB146CE1E69FBBA000C37B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -62,12 +59,7 @@
 			children = (
 				0BB146C21E69FBBA000C37B2 /* AppDelegate.h */,
 				0BB146C31E69FBBA000C37B2 /* AppDelegate.m */,
-				0BB146C51E69FBBA000C37B2 /* ViewController.h */,
-				0BB146C61E69FBBA000C37B2 /* ViewController.m */,
 				0BB146C81E69FBBA000C37B2 /* Main.storyboard */,
-				0BB146CE1E69FBBA000C37B2 /* Assets.xcassets */,
-				0BB146D01E69FBBA000C37B2 /* LaunchScreen.storyboard */,
-				0BB146D31E69FBBA000C37B2 /* Info.plist */,
 				0BB146CB1E69FBBA000C37B2 /* FlickrRESTPractice.xcdatamodeld */,
 				0BB146BF1E69FBBA000C37B2 /* Supporting Files */,
 			);
@@ -77,6 +69,9 @@
 		0BB146BF1E69FBBA000C37B2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0BB146CE1E69FBBA000C37B2 /* Assets.xcassets */,
+				0BB146D31E69FBBA000C37B2 /* Info.plist */,
+				0BB146D01E69FBBA000C37B2 /* LaunchScreen.storyboard */,
 				0BB146C01E69FBBA000C37B2 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -153,7 +148,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0BB146C71E69FBBA000C37B2 /* ViewController.m in Sources */,
 				0BB146C41E69FBBA000C37B2 /* AppDelegate.m in Sources */,
 				0BB146C11E69FBBA000C37B2 /* main.m in Sources */,
 				0BB146CD1E69FBBA000C37B2 /* FlickrRESTPractice.xcdatamodeld in Sources */,
