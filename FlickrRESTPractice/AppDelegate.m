@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "FlickrURL.h"
 
 @interface AppDelegate ()
 
@@ -18,10 +17,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    NSURL *flickrurl = [FlickrURL URLforTopPlacesList];
-    
     return YES;
 }
+
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {

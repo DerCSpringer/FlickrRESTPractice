@@ -17,14 +17,14 @@
 + (NSURL *)genericURLForQuery:(NSString *)query
 {
     query = [NSString stringWithFormat:@"%@&format=json&nojsoncallback=1&api_key=%@", query, FLICKR_API_KEY];
-    query = [query stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLHostAllowedCharacterSet]];
+    query = [query stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLFragmentAllowedCharacterSet]];
     return [NSURL URLWithString:query];
 }
 
 + (NSURL *)URLforTopPlacesList
 
 {
-    return [self genericURLForQuery:@"http://api.flickr.com/services/rest/?method=flickr.places.getTopPlacesList&place_type_id=7"];
+    return [self genericURLForQuery:@"https://api.flickr.com/services/rest/?method=flickr.places.getTopPlacesList&place_type_id=7"];
 }
 
 @end
