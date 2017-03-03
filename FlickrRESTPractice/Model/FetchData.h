@@ -10,6 +10,8 @@
 
 @class FetchData;
 
+//Must subscribe to protocol if the data from the fetch is to be used
+
 @protocol didFinishFetch <NSObject>
 
 @optional
