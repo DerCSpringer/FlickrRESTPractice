@@ -16,6 +16,7 @@
 		0BB146DE1E69FC91000C37B2 /* Person+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BB146DC1E69FC91000C37B2 /* Person+CoreDataProperties.m */; };
 		0BB146E21E6A19BD000C37B2 /* FlickrURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BB146E11E6A19BD000C37B2 /* FlickrURL.m */; };
 		0BBB43651E6A263B00B84B0D /* ToDo.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 0BBB43641E6A263B00B84B0D /* ToDo.rtf */; };
+		0BBB43681E6A293900B84B0D /* FetchData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BBB43671E6A293900B84B0D /* FetchData.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,8 @@
 		0BB146E01E6A19BD000C37B2 /* FlickrURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlickrURL.h; path = Model/FlickrURL.h; sourceTree = "<group>"; };
 		0BB146E11E6A19BD000C37B2 /* FlickrURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FlickrURL.m; path = Model/FlickrURL.m; sourceTree = "<group>"; };
 		0BBB43641E6A263B00B84B0D /* ToDo.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = ToDo.rtf; sourceTree = "<group>"; };
+		0BBB43661E6A293900B84B0D /* FetchData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FetchData.h; path = Model/FetchData.h; sourceTree = "<group>"; };
+		0BBB43671E6A293900B84B0D /* FetchData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FetchData.m; path = Model/FetchData.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +103,8 @@
 		0BB146E31E6A19C4000C37B2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0BBB43661E6A293900B84B0D /* FetchData.h */,
+				0BBB43671E6A293900B84B0D /* FetchData.m */,
 				0BB146E01E6A19BD000C37B2 /* FlickrURL.h */,
 				0BB146E11E6A19BD000C37B2 /* FlickrURL.m */,
 			);
@@ -178,6 +183,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BBB43681E6A293900B84B0D /* FetchData.m in Sources */,
 				0BB146E21E6A19BD000C37B2 /* FlickrURL.m in Sources */,
 				0BB146C41E69FBBA000C37B2 /* AppDelegate.m in Sources */,
 				0BB146C11E69FBBA000C37B2 /* main.m in Sources */,
