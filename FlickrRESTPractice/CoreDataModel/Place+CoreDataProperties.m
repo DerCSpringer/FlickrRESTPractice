@@ -1,5 +1,5 @@
 //
-//  Person+CoreDataProperties.m
+//  Place+CoreDataProperties.m
 //  FlickrRESTPractice
 //
 //  Created by Daniel Springer on 3/3/17.
@@ -7,12 +7,12 @@
 //  This file was automatically generated and should not be edited.
 //
 
-#import "Person+CoreDataProperties.h"
+#import "Place+CoreDataProperties.h"
 
-@implementation Person (CoreDataProperties)
+@implementation Place (CoreDataProperties)
 
-+ (NSFetchRequest<Person *> *)fetchRequest {
-	return [[NSFetchRequest alloc] initWithEntityName:@"Person"];
++ (NSFetchRequest<Place *> *)fetchRequest {
+	return [[NSFetchRequest alloc] initWithEntityName:@"Place"];
 }
 
 @dynamic name;

@@ -8,10 +8,13 @@
 
 #import "TopPlacesTVC.h"
 #import "FlickrURL.h"
+#import "Place+CoreDataClass.h"
+#import "AppDelegate.h"
 
 @interface TopPlacesTVC ()
 
 @property NSDictionary* data;
+@property NSManagedObjectContext *context;
 
 @end
 
@@ -19,6 +22,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    AppDelegate<UIApplicationDelegate> *application = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    self.context = application.persistentContainer.viewContext;
+
     
     NSURL *flickrurl = [FlickrURL URLforTopPlacesList];
     FetchData *fetch = [[FetchData alloc] init];
@@ -34,6 +40,8 @@
 
 -(void)finished:(FetchData *)fetch withJSON:(NSDictionary *)data {
     self.data = data;
+    //Place *place = [Place insertNewObjectIntoContext:self.context];
+    [Place insertNewObjectsFromFlickr:data intoContext:self.context];
 }
 
 #pragma mark - Table view data source

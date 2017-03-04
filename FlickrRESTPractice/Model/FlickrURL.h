@@ -10,8 +10,15 @@
 
 @interface FlickrURL : NSObject
 
+typedef enum {
+    FlickrPhotoFormatSquare = 1,    // thumbnail
+    FlickrPhotoFormatLarge = 2,     // normal size
+    FlickrPhotoFormatOriginal = 64  // high resolution
+} FlickrPhotoFormat;
 
 
 + (NSURL *)URLforTopPlacesList;
+
++ (NSURL *)URLforPhoto:(NSDictionary *)photo format:(FlickrPhotoFormat)format;
 
 @end

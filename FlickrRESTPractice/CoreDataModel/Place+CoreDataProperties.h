@@ -1,5 +1,5 @@
 //
-//  Person+CoreDataProperties.h
+//  Place+CoreDataProperties.h
 //  FlickrRESTPractice
 //
 //  Created by Daniel Springer on 3/3/17.
@@ -7,14 +7,14 @@
 //  This file was automatically generated and should not be edited.
 //
 
-#import "Person+CoreDataClass.h"
+#import "Place+CoreDataClass.h"
 
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Person (CoreDataProperties)
+@interface Place (CoreDataProperties)
 
-+ (NSFetchRequest<Person *> *)fetchRequest;
++ (NSFetchRequest<Place *> *)fetchRequest;
 
 @property (nullable, nonatomic, copy) NSString *name;
 
