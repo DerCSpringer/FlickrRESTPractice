@@ -27,6 +27,11 @@
     return [self genericURLForQuery:@"https://api.flickr.com/services/rest/?method=flickr.places.getTopPlacesList&place_type_id=7"];
 }
 
++ (NSURL *)URLforPhotosInPlace:(id)flickrPlaceId maxResults:(int)maxResults;
+{
+    return [self genericURLForQuery:[NSString stringWithFormat:@"http://api.flickr.com/services/rest/?method=flickr.photos.search&place_id=%@&per_page=%d&extras=original_format,tags,description,geo,date_upload,owner_name,place_url", flickrPlaceId, maxResults]];
+}
+
 + (NSURL *)URLforPhoto:(NSDictionary *)photo format:(FlickrPhotoFormat)format;
 {
     return [NSURL URLWithString:[self urlStringForPhoto:photo format:format]];
