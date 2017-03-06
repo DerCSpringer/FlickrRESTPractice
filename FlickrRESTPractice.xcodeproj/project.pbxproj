@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B98F7FA1E6DF168004FAC78 /* NSFetchedResultsControllerDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B98F7F91E6DF168004FAC78 /* NSFetchedResultsControllerDataSource.m */; };
 		0B99CEA51E6A3B56003F59DA /* Place+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B99CEA21E6A3B56003F59DA /* Place+CoreDataClass.m */; };
 		0B99CEA61E6A3B56003F59DA /* Place+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B99CEA41E6A3B56003F59DA /* Place+CoreDataProperties.m */; };
 		0BB146C11E69FBBA000C37B2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BB146C01E69FBBA000C37B2 /* main.m */; };
@@ -24,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B98F7F81E6DF168004FAC78 /* NSFetchedResultsControllerDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSFetchedResultsControllerDataSource.h; path = CoreDataModel/NSFetchedResultsControllerDataSource.h; sourceTree = "<group>"; };
+		0B98F7F91E6DF168004FAC78 /* NSFetchedResultsControllerDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSFetchedResultsControllerDataSource.m; path = CoreDataModel/NSFetchedResultsControllerDataSource.m; sourceTree = "<group>"; };
 		0B99CEA01E6A37CE003F59DA /* FlickrKeys.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FlickrKeys.h; path = FlickrRESTPractice/FlickrKeys.h; sourceTree = "<group>"; };
 		0B99CEA11E6A3B56003F59DA /* Place+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Place+CoreDataClass.h"; path = "CoreDataModel/Place+CoreDataClass.h"; sourceTree = "<group>"; };
 		0B99CEA21E6A3B56003F59DA /* Place+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Place+CoreDataClass.m"; path = "CoreDataModel/Place+CoreDataClass.m"; sourceTree = "<group>"; };
@@ -109,6 +112,8 @@
 		0BB146DF1E69FC99000C37B2 /* Core Data Model */ = {
 			isa = PBXGroup;
 			children = (
+				0B98F7F81E6DF168004FAC78 /* NSFetchedResultsControllerDataSource.h */,
+				0B98F7F91E6DF168004FAC78 /* NSFetchedResultsControllerDataSource.m */,
 				0B99CEA11E6A3B56003F59DA /* Place+CoreDataClass.h */,
 				0B99CEA21E6A3B56003F59DA /* Place+CoreDataClass.m */,
 				0B99CEA31E6A3B56003F59DA /* Place+CoreDataProperties.h */,
@@ -218,6 +223,7 @@
 				0BBB43741E6A315400B84B0D /* PlaceCell.m in Sources */,
 				0B99CEA51E6A3B56003F59DA /* Place+CoreDataClass.m in Sources */,
 				0BB146C11E69FBBA000C37B2 /* main.m in Sources */,
+				0B98F7FA1E6DF168004FAC78 /* NSFetchedResultsControllerDataSource.m in Sources */,
 				0B99CEA61E6A3B56003F59DA /* Place+CoreDataProperties.m in Sources */,
 				0BBB436B1E6A2E7D00B84B0D /* TopPlacesTVC.m in Sources */,
 				0BB146CD1E69FBBA000C37B2 /* FlickrRESTPractice.xcdatamodeld in Sources */,

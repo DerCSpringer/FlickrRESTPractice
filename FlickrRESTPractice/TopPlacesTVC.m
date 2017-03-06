@@ -22,6 +22,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    //might wanna create a seperate store class to avoid this
     AppDelegate<UIApplicationDelegate> *application = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     self.context = application.persistentContainer.viewContext;
 
@@ -40,7 +42,6 @@
 
 -(void)finished:(FetchData *)fetch withJSON:(NSDictionary *)data {
     self.data = data;
-    //Place *place = [Place insertNewObjectIntoContext:self.context];
     [Place insertNewObjectsFromFlickr:data intoContext:self.context];
     NSSet *set = [self.context insertedObjects];
 }
