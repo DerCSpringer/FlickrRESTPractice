@@ -16,5 +16,6 @@
 }
 
 @dynamic name;
-
+@dynamic fullSizePhotoURL;
+@dynamic thumbnailData;
 @end

@@ -10,8 +10,10 @@
 #import "FlickrURL.h"
 #import "Place+CoreDataClass.h"
 #import "AppDelegate.h"
+#import "FetchedResultsControllerDataSource.h"
+#import "PlaceCell.h"
 
-@interface TopPlacesTVC ()
+@interface TopPlacesTVC ()<FetchedResultsControllerDataSourceDelegate>
 
 @property NSDictionary* data;
 @property NSManagedObjectContext *context;
@@ -43,24 +45,19 @@
 -(void)finished:(FetchData *)fetch withJSON:(NSDictionary *)data {
     self.data = data;
     [Place insertNewObjectsFromFlickr:data intoContext:self.context];
-    NSSet *set = [self.context insertedObjects];
+}
+
+-(void)configureCell:(id)theCell withObject:(id)object {
+    PlaceCell *pCell = theCell;
+    
 }
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
-}
 
 /*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: forIndexPath:indexPath];
     
     // Configure the cell...
     

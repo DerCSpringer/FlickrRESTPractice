@@ -17,6 +17,9 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSFetchRequest<Place *> *)fetchRequest;
 
 @property (nullable, nonatomic, copy) NSString *name;
+@property (nullable, nonatomic, copy) NSString *fullSizePhotoURL;
+@property (nullable, nonatomic, copy) NSData *thumbnailData;
+
 
 @end
 

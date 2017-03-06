@@ -6,15 +6,15 @@
 //  Copyright © 2017 Daniel Springer. All rights reserved.
 //
 
-#import "NSFetchedResultsControllerDataSource.h"
+#import "FetchedResultsControllerDataSource.h"
 
-@interface NSFetchedResultsControllerDataSource ()
+@interface FetchedResultsControllerDataSource ()
 
 @property (nonatomic, strong) UITableView* tableView;
 
 @end
 
-@implementation NSFetchedResultsControllerDataSource
+@implementation FetchedResultsControllerDataSource
 
 
 - (id)initWithTableView:(UITableView*)tableView
