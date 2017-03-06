@@ -42,6 +42,7 @@
     self.data = data;
     //Place *place = [Place insertNewObjectIntoContext:self.context];
     [Place insertNewObjectsFromFlickr:data intoContext:self.context];
+    NSSet *set = [self.context insertedObjects];
 }
 
 #pragma mark - Table view data source

@@ -12,6 +12,7 @@
 
 #define FLICKR_RESULTS_PHOTOS @"photos.photo"
 #define FLICKR_RESULTS_PLACES @"places.place"
+#define FLICKR_RESULTS_PLACES_NAME @"woe_name"
 
 
 

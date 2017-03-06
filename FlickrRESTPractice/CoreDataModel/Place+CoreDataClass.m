@@ -27,7 +27,7 @@
     NSArray *places = [results valueForKeyPath:FLICKR_RESULTS_PLACES];
     for (NSDictionary *place in  places) {
         Place *placeInDB = [self insertNewObjectIntoContext:context];
-        placeInDB.name = [place valueForKey:@"woe_name"];
+        placeInDB.name = [place valueForKey:FLICKR_RESULTS_PLACES_NAME];
     }
 }
 
