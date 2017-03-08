@@ -25,14 +25,17 @@
                                          inManagedObjectContext:context];
 }
 
-+ (void)insertNewObjectsFromFlickr:(NSDictionary *)results intoContext:(NSManagedObjectContext *)context {
-    NSArray *places = [results valueForKeyPath:FLICKR_RESULTS_PLACES];
++ (void)insertNewObjectsFromFlickr:(NSDictionary *)results andPhotoData:(NSData *)data intoContext:(NSManagedObjectContext *)context {
+NSArray *places = [results valueForKeyPath:FLICKR_RESULTS_PLACES];
     for (NSDictionary *place in  places) {
         Place *placeInDB = [self insertNewObjectIntoContext:context];
         placeInDB.name = [place valueForKey:FLICKR_RESULTS_PLACES_NAME];
         NSString *urlString = [place valueForKeyPath:FLICKR_PHOTO_PLACE_ID];
+#warning fix this check FetchTopPlaces
+        //PhotoURL is actually different
         NSURL *photoURL = [FlickrURL URLforPhotosInPlace:urlString maxResults:1];
-        placeInDB.fullSizePhotoURL;
+        placeInDB.fullSizePhotoURL = [photoURL absoluteString];
+        placeInDB.thumbnailData  = data;
     }
 }
 

@@ -29,13 +29,13 @@
     
     //might wanna create a seperate store class to avoid this
     AppDelegate<UIApplicationDelegate> *application = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    self.context = application.persistentContainer.viewContext;
-
-    
-    NSURL *flickrurl = [FlickrURL URLforTopPlacesList];
-    FetchData *fetch = [[FetchData alloc] init];
-    fetch.delegate = self;
-    [fetch fetchJSONDataAt:flickrurl];
+//    self.context = application.persistentContainer.viewContext;
+//
+//    
+//    NSURL *flickrurl = [FlickrURL URLforTopPlacesList];
+//    FetchData *fetch = [[FetchData alloc] init];
+//    fetch.delegate = self;
+//    [fetch fetchJSONDataAt:flickrurl];
     
 }
 
@@ -53,7 +53,7 @@
 //    [aFetch fetchJSONDataAt:photoURL];
     //Fetches the photo dictionary I send to the flickr URL. use valueforkeypath "photo" to get dictionary for photo
     
-    [Place insertNewObjectsFromFlickr:data intoContext:self.context];
+    //[Place insertNewObjectsFromFlickr:data intoContext:self.context];
     
 }
 

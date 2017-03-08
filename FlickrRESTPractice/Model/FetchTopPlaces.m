@@ -25,7 +25,7 @@
           NSError *jsonError = nil;
           id result = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
           if ([result isKindOfClass:[NSDictionary class]]) {
-              NSArray *places = result[@"result"];
+              NSArray *places = [result valueForKeyPath:FLICKR_RESULTS_PLACES];
               callback(places);
               
           }
@@ -33,16 +33,28 @@
 }
 
 - (void)fetchPhotoDataForPlace:(NSDictionary *)place callback:(void (^)(NSData *place))callback {
-    NSURL *photoURL = [FlickrURL URLforPhotosInPlace:[place valueForKey:FLICKR_PHOTO_PLACE_ID] maxResults:1];
-    [[[NSURLSession sharedSession] dataTaskWithURL:photoURL completionHandler:
+    NSURL *photoDictionaryURL = [FlickrURL URLforPhotosInPlace:[place valueForKey:FLICKR_PHOTO_PLACE_ID] maxResults:1];
+    [[[NSURLSession sharedSession] dataTaskWithURL:photoDictionaryURL completionHandler:
       ^(NSData *data, NSURLResponse *response, NSError *error) {
           if (error) {
               NSLog(@"error: %@", error.localizedDescription);
               callback(nil);
               return;
           }
-              callback(data);
-              
+          NSError *jsonError = nil;
+          id result = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
+          if ([result isKindOfClass:[NSDictionary class]]) {
+              NSURL *photoURL = [FlickrURL URLforPhoto:[result valueForKeyPath:FLICKR_RESULTS_PHOTOS][0] format:FlickrPhotoFormatSquare];
+              [[[NSURLSession sharedSession] dataTaskWithURL:photoURL completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+                  if (error) {
+                      NSLog(@"error: %@", error.localizedDescription);
+                      callback(nil);
+                      return;
+                  }
+                  callback(data);
+              }] resume];
+              //callback(data);
+          }
       }] resume];
 }
 

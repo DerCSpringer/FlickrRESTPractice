@@ -9,6 +9,7 @@
 #import "Importer.h"
 #import "FetchTopPlaces.h"
 #import "Place+CoreDataClass.h"
+#import <UIKit/UIKit.h>
 
 @interface Importer ()
 
@@ -34,9 +35,9 @@
      {
          [self.context performBlock:^
           {
-              for(NSDictionary *place in places) {
-                  [self.fetch fetchPhotoDataForPlace:place callback:^(NSData *place) {
-                      Place 
+              for(NSDictionary *placeInfo in places) {
+                  [self.fetch fetchPhotoDataForPlace:placeInfo callback:^(NSData *placePhoto) {
+                      [Place insertNewObjectsFromFlickr:placeInfo andPhotoData:placePhoto intoContext:self.context];
                   }];
 
               }

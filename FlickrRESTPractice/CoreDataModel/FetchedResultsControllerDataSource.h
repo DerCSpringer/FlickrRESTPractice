@@ -13,7 +13,6 @@
 @class NSFetchedResultsController;
 
 @protocol FetchedResultsControllerDataSourceDelegate
-#warning Configure with a block insead
 - (void)configureCell:(id)cell withObject:(id)object;
 
 @optional

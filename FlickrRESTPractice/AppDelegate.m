@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "Importer.h"
+#import "FetchTopPlaces.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +19,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    FetchTopPlaces *fetch = [[FetchTopPlaces alloc] init];
+    Importer *importer = [[Importer alloc] initWithContext:self.persistentContainer.viewContext fetch:fetch];
+    [importer import];
     return YES;
 }
 
