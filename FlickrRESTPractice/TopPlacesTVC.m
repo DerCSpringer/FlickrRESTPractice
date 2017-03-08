@@ -12,6 +12,7 @@
 #import "AppDelegate.h"
 #import "FetchedResultsControllerDataSource.h"
 #import "PlaceCell.h"
+#import "PlaceCell+ConfigureForPlace.h"
 #import "FlickrKeys.h"
 
 @interface TopPlacesTVC ()<FetchedResultsControllerDataSourceDelegate>
@@ -56,9 +57,8 @@
     
 }
 
--(void)configureCell:(id)theCell withObject:(id)object {
-    PlaceCell *pCell = theCell;
-    
+-(void)configureCell:(PlaceCell *)theCell withObject:(Place *)object {
+    [theCell configureForPlace:object];
 }
 
 #pragma mark - Table view data source

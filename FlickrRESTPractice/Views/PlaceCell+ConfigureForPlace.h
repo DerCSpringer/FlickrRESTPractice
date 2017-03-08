@@ -8,6 +8,10 @@
 
 #import "PlaceCell.h"
 
+@class Place;
+
 @interface PlaceCell (ConfigureForPlace)
+
+- (void)configureForPlace:(Place *)place;
 
 @end

@@ -7,7 +7,13 @@
 //
 
 #import "PlaceCell+ConfigureForPlace.h"
+#import "Place+CoreDataProperties.h"
 
 @implementation PlaceCell (ConfigureForPlace)
+
+- (void)configureForPlace:(Place *)place {
+    self.placeName.text = place.name;
+    self.placeSampleImage.image = [UIImage imageWithData:place.thumbnailData];
+}
 
 @end
