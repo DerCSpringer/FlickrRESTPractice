@@ -7,7 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreData/CoreData.h>
+@class FetchData;
+
 
 @interface Importer : NSObject
+
+- (id)initWithContext:(NSManagedObjectContext *)context
+                fetch:(FetchData *)fetch;
+-(void)import;
 
 @end
