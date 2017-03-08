@@ -12,6 +12,7 @@
 #import "AppDelegate.h"
 #import "FetchedResultsControllerDataSource.h"
 #import "PlaceCell.h"
+#import "FlickrKeys.h"
 
 @interface TopPlacesTVC ()<FetchedResultsControllerDataSourceDelegate>
 
@@ -44,7 +45,15 @@
 
 -(void)finished:(FetchData *)fetch withJSON:(NSDictionary *)data {
     self.data = data;
+//    FetchData *aFetch = [[FetchData alloc] init];
+//    aFetch.delegate = self;
+//    NSArray *places = [self.data valueForKeyPath:FLICKR_RESULTS_PLACES];
+//    NSURL *photoURL = [FlickrURL URLforPhotosInPlace:[places[0] valueForKeyPath:FLICKR_PHOTO_PLACE_ID] maxResults:1];
+//    [aFetch fetchJSONDataAt:photoURL];
+    //Fetches the photo dictionary I send to the flickr URL. use valueforkeypath "photo" to get dictionary for photo
+    
     [Place insertNewObjectsFromFlickr:data intoContext:self.context];
+    
 }
 
 -(void)configureCell:(id)theCell withObject:(id)object {

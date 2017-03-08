@@ -9,6 +9,8 @@
 
 #import "Place+CoreDataClass.h"
 #import "FlickrKeys.h"
+#import "FlickrURL.h"
+
 
 @implementation Place
 
@@ -28,6 +30,9 @@
     for (NSDictionary *place in  places) {
         Place *placeInDB = [self insertNewObjectIntoContext:context];
         placeInDB.name = [place valueForKey:FLICKR_RESULTS_PLACES_NAME];
+        NSString *urlString = [place valueForKeyPath:FLICKR_PHOTO_PLACE_ID];
+        NSURL *photoURL = [FlickrURL URLforPhotosInPlace:urlString maxResults:1];
+        placeInDB.fullSizePhotoURL;
     }
 }
 

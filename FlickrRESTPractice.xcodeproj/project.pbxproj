@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0B98F7FA1E6DF168004FAC78 /* FetchedResultsControllerDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B98F7F91E6DF168004FAC78 /* FetchedResultsControllerDataSource.m */; };
+		0B98F8011E6E0DE4004FAC78 /* FetchFlickrData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B98F8001E6E0DE4004FAC78 /* FetchFlickrData.m */; };
+		0B98F8051E709D45004FAC78 /* Importer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B98F8041E709D45004FAC78 /* Importer.m */; };
 		0B99CEA51E6A3B56003F59DA /* Place+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B99CEA21E6A3B56003F59DA /* Place+CoreDataClass.m */; };
 		0B99CEA61E6A3B56003F59DA /* Place+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B99CEA41E6A3B56003F59DA /* Place+CoreDataProperties.m */; };
 		0BB146C11E69FBBA000C37B2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BB146C01E69FBBA000C37B2 /* main.m */; };
@@ -27,6 +29,10 @@
 /* Begin PBXFileReference section */
 		0B98F7F81E6DF168004FAC78 /* FetchedResultsControllerDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FetchedResultsControllerDataSource.h; path = CoreDataModel/FetchedResultsControllerDataSource.h; sourceTree = "<group>"; };
 		0B98F7F91E6DF168004FAC78 /* FetchedResultsControllerDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FetchedResultsControllerDataSource.m; path = CoreDataModel/FetchedResultsControllerDataSource.m; sourceTree = "<group>"; };
+		0B98F7FF1E6E0DE4004FAC78 /* FetchFlickrData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FetchFlickrData.h; path = Model/FetchFlickrData.h; sourceTree = "<group>"; };
+		0B98F8001E6E0DE4004FAC78 /* FetchFlickrData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FetchFlickrData.m; path = Model/FetchFlickrData.m; sourceTree = "<group>"; };
+		0B98F8031E709D45004FAC78 /* Importer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Importer.h; path = Model/Importer.h; sourceTree = "<group>"; };
+		0B98F8041E709D45004FAC78 /* Importer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Importer.m; path = Model/Importer.m; sourceTree = "<group>"; };
 		0B99CEA01E6A37CE003F59DA /* FlickrKeys.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FlickrKeys.h; path = FlickrRESTPractice/FlickrKeys.h; sourceTree = "<group>"; };
 		0B99CEA11E6A3B56003F59DA /* Place+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Place+CoreDataClass.h"; path = "CoreDataModel/Place+CoreDataClass.h"; sourceTree = "<group>"; };
 		0B99CEA21E6A3B56003F59DA /* Place+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Place+CoreDataClass.m"; path = "CoreDataModel/Place+CoreDataClass.m"; sourceTree = "<group>"; };
@@ -126,8 +132,12 @@
 		0BB146E31E6A19C4000C37B2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0B98F8031E709D45004FAC78 /* Importer.h */,
+				0B98F8041E709D45004FAC78 /* Importer.m */,
 				0BBB43661E6A293900B84B0D /* FetchData.h */,
 				0BBB43671E6A293900B84B0D /* FetchData.m */,
+				0B98F7FF1E6E0DE4004FAC78 /* FetchFlickrData.h */,
+				0B98F8001E6E0DE4004FAC78 /* FetchFlickrData.m */,
 				0BB146E01E6A19BD000C37B2 /* FlickrURL.h */,
 				0BB146E11E6A19BD000C37B2 /* FlickrURL.m */,
 			);
@@ -217,12 +227,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B98F8011E6E0DE4004FAC78 /* FetchFlickrData.m in Sources */,
 				0BBB43681E6A293900B84B0D /* FetchData.m in Sources */,
 				0BB146E21E6A19BD000C37B2 /* FlickrURL.m in Sources */,
 				0BB146C41E69FBBA000C37B2 /* AppDelegate.m in Sources */,
 				0BBB43741E6A315400B84B0D /* PlaceCell.m in Sources */,
 				0B99CEA51E6A3B56003F59DA /* Place+CoreDataClass.m in Sources */,
 				0BB146C11E69FBBA000C37B2 /* main.m in Sources */,
+				0B98F8051E709D45004FAC78 /* Importer.m in Sources */,
 				0B98F7FA1E6DF168004FAC78 /* FetchedResultsControllerDataSource.m in Sources */,
 				0B99CEA61E6A3B56003F59DA /* Place+CoreDataProperties.m in Sources */,
 				0BBB436B1E6A2E7D00B84B0D /* TopPlacesTVC.m in Sources */,
