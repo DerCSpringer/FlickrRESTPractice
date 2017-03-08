@@ -10,4 +10,7 @@
 
 @interface FetchTopPlaces : NSObject
 
+- (void)fetchAllPlaces:(void (^)(NSArray *places))callback;
+- (void)fetchPhotoDataForPlace:(NSDictionary *)place callback:(void (^)(NSData *place))callback;
+
 @end

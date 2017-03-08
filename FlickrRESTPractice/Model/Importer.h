@@ -8,13 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
-@class FetchData;
 
+@class FetchTopPlaces;
 
 @interface Importer : NSObject
 
 - (id)initWithContext:(NSManagedObjectContext *)context
-                fetch:(FetchData *)fetch;
+                fetch:(FetchTopPlaces *)fetch;
 -(void)import;
 
 @end

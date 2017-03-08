@@ -7,19 +7,20 @@
 //
 
 #import "Importer.h"
-#import "FetchData.h"
+#import "FetchTopPlaces.h"
+#import "Place+CoreDataClass.h"
 
 @interface Importer ()
 
 @property (nonatomic, strong) NSManagedObjectContext *context;
-@property (nonatomic, strong) FetchData *fetch;
+@property (nonatomic, strong) FetchTopPlaces *fetch;
 
 @end
 
 @implementation Importer
 
 - (id)initWithContext:(NSManagedObjectContext *)context
-                fetch:(FetchData *)fetch {
+                fetch:(FetchTopPlaces *)fetch {
     self = [super init];
     if (self) {
         self.context = context;
@@ -29,23 +30,22 @@
 }
 
 -(void)import {
-    [self.webservice fetchAllPods:^(NSArray *pods)
+    [self.fetch fetchAllPlaces:^(NSArray *places)
      {
          [self.context performBlock:^
           {
-              for(NSDictionary *podSpec in pods) { //This is called everytime a page is loaded up.
-                  NSString *identifier = [podSpec[@"name"] stringByAppendingString:podSpec[@"version"]];
-                  Pod *pod = [Pod findOrCreatePodWithIdentifier:identifier inContext:self.context];
-                  [pod loadFromDictionary:podSpec];
+              for(NSDictionary *place in places) {
+                  [self.fetch fetchPhotoDataForPlace:place callback:^(NSData *place) {
+                      Place 
+                  }];
+
               }
-              self.batchCount++;
-              if (self.batchCount % 10 == 0) { //Save every 10 pages
                   NSError *error = nil;
                   [self.context save:&error];
                   if (error) {
                       NSLog(@"Error: %@", error.localizedDescription);
                   }
-              }
+              
           }];
      }];
 }
