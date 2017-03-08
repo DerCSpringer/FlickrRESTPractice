@@ -26,4 +26,7 @@
 @property (nonatomic, strong) NSFetchedResultsController* fetchedResultsController;
 @property (nonatomic, copy) NSString* reuseIdentifier;
 
+- (id)initWithTableView:(UITableView*)tableView;
+- (id)objectAtIndexPath:(NSIndexPath*)indexPath;
+
 @end

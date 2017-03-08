@@ -12,4 +12,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *placeName;
 @property (weak, nonatomic) IBOutlet UIImageView *placeSampleImage;
 
+
++ (UINib *)nib;
+
 @end

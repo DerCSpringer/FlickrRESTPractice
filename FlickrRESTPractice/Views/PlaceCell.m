@@ -10,6 +10,11 @@
 
 @implementation PlaceCell
 
++ (UINib *)nib
+{
+    return [UINib nibWithNibName:@"PlaceCell" bundle:nil];
+}
+
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code

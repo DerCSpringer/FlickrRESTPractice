@@ -15,10 +15,14 @@
 #import "PlaceCell+ConfigureForPlace.h"
 #import "FlickrKeys.h"
 
+static NSString *const PlaceCellIdentifier = @"PhotoCell";
+
+
 @interface TopPlacesTVC ()<FetchedResultsControllerDataSourceDelegate>
 
 @property NSDictionary* data;
-@property NSManagedObjectContext *context;
+@property NSManagedObjectContext *managedObjectContext;
+@property (nonatomic) FetchedResultsControllerDataSource *dataSource;
 
 @end
 
@@ -26,9 +30,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.tableView registerNib:[PlaceCell nib] forCellReuseIdentifier:PlaceCellIdentifier];
+    AppDelegate<UIApplicationDelegate> *application = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    self.managedObjectContext = application.persistentContainer.viewContext;
+
+    
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Place"];
+    request.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES]];
+    self.dataSource = [[FetchedResultsControllerDataSource alloc] initWithTableView:self.tableView];
+    self.dataSource.delegate = self;
+    self.dataSource.fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:request managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:nil];
+    self.dataSource.reuseIdentifier = PlaceCellIdentifier;
     
     //might wanna create a seperate store class to avoid this
-    AppDelegate<UIApplicationDelegate> *application = (AppDelegate *)[[UIApplication sharedApplication] delegate];
 //    self.context = application.persistentContainer.viewContext;
 //
 //    

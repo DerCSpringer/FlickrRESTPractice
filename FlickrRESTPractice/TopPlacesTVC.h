@@ -10,6 +10,6 @@
 #import "FetchData.h"
 
 
-@interface TopPlacesTVC : UITableViewController<didFinishFetch>
+@interface TopPlacesTVC : UITableViewController
 
 @end
