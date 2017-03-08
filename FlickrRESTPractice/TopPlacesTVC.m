@@ -31,6 +31,7 @@ static NSString *const PlaceCellIdentifier = @"PhotoCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.tableView registerNib:[PlaceCell nib] forCellReuseIdentifier:PlaceCellIdentifier];
+    //might wanna create a seperate store class to avoid this
     AppDelegate<UIApplicationDelegate> *application = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     self.managedObjectContext = application.persistentContainer.viewContext;
 
@@ -42,14 +43,6 @@ static NSString *const PlaceCellIdentifier = @"PhotoCell";
     self.dataSource.fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:request managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:nil];
     self.dataSource.reuseIdentifier = PlaceCellIdentifier;
     
-    //might wanna create a seperate store class to avoid this
-//    self.context = application.persistentContainer.viewContext;
-//
-//    
-//    NSURL *flickrurl = [FlickrURL URLforTopPlacesList];
-//    FetchData *fetch = [[FetchData alloc] init];
-//    fetch.delegate = self;
-//    [fetch fetchJSONDataAt:flickrurl];
     
 }
 
@@ -58,69 +51,11 @@ static NSString *const PlaceCellIdentifier = @"PhotoCell";
     // Dispose of any resources that can be recreated.
 }
 
--(void)finished:(FetchData *)fetch withJSON:(NSDictionary *)data {
-    self.data = data;
-//    FetchData *aFetch = [[FetchData alloc] init];
-//    aFetch.delegate = self;
-//    NSArray *places = [self.data valueForKeyPath:FLICKR_RESULTS_PLACES];
-//    NSURL *photoURL = [FlickrURL URLforPhotosInPlace:[places[0] valueForKeyPath:FLICKR_PHOTO_PLACE_ID] maxResults:1];
-//    [aFetch fetchJSONDataAt:photoURL];
-    //Fetches the photo dictionary I send to the flickr URL. use valueforkeypath "photo" to get dictionary for photo
-    
-    //[Place insertNewObjectsFromFlickr:data intoContext:self.context];
-    
-}
 
 -(void)configureCell:(PlaceCell *)theCell withObject:(Place *)object {
     [theCell configureForPlace:object];
 }
 
-#pragma mark - Table view data source
-
-
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
-    return cell;
-}
-*/
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
 
 /*
 #pragma mark - Navigation

@@ -39,7 +39,6 @@
                   [self.fetch fetchPhotoDataForPlace:placeInfo callback:^(NSData *placePhoto) {
                       [Place insertNewObjectsFromFlickr:placeInfo andPhotoData:placePhoto intoContext:self.context];
                   }];
-
               }
                   NSError *error = nil;
                   [self.context save:&error];
