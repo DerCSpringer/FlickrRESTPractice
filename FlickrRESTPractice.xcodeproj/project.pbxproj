@@ -12,6 +12,7 @@
 		0B98F8051E709D45004FAC78 /* Importer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B98F8041E709D45004FAC78 /* Importer.m */; };
 		0B98F8081E70A236004FAC78 /* PlaceCell+ConfigureForPlace.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B98F8071E70A236004FAC78 /* PlaceCell+ConfigureForPlace.m */; };
 		0B98F80B1E70A881004FAC78 /* FetchTopPlaces.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B98F80A1E70A881004FAC78 /* FetchTopPlaces.m */; };
+		0B98F80F1E70D2FA004FAC78 /* TopPlaceImageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B98F80E1E70D2FA004FAC78 /* TopPlaceImageVC.m */; };
 		0B99CEA51E6A3B56003F59DA /* Place+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B99CEA21E6A3B56003F59DA /* Place+CoreDataClass.m */; };
 		0B99CEA61E6A3B56003F59DA /* Place+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B99CEA41E6A3B56003F59DA /* Place+CoreDataProperties.m */; };
 		0BB146C11E69FBBA000C37B2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BB146C01E69FBBA000C37B2 /* main.m */; };
@@ -39,6 +40,8 @@
 		0B98F8071E70A236004FAC78 /* PlaceCell+ConfigureForPlace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "PlaceCell+ConfigureForPlace.m"; path = "Views/PlaceCell+ConfigureForPlace.m"; sourceTree = "<group>"; };
 		0B98F8091E70A881004FAC78 /* FetchTopPlaces.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FetchTopPlaces.h; path = Model/FetchTopPlaces.h; sourceTree = "<group>"; };
 		0B98F80A1E70A881004FAC78 /* FetchTopPlaces.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FetchTopPlaces.m; path = Model/FetchTopPlaces.m; sourceTree = "<group>"; };
+		0B98F80D1E70D2FA004FAC78 /* TopPlaceImageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopPlaceImageVC.h; sourceTree = "<group>"; };
+		0B98F80E1E70D2FA004FAC78 /* TopPlaceImageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopPlaceImageVC.m; sourceTree = "<group>"; };
 		0B99CEA01E6A37CE003F59DA /* FlickrKeys.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FlickrKeys.h; path = FlickrRESTPractice/FlickrKeys.h; sourceTree = "<group>"; };
 		0B99CEA11E6A3B56003F59DA /* Place+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Place+CoreDataClass.h"; path = "CoreDataModel/Place+CoreDataClass.h"; sourceTree = "<group>"; };
 		0B99CEA21E6A3B56003F59DA /* Place+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Place+CoreDataClass.m"; path = "CoreDataModel/Place+CoreDataClass.m"; sourceTree = "<group>"; };
@@ -76,6 +79,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B98F80C1E70D209004FAC78 /* NotUsed */ = {
+			isa = PBXGroup;
+			children = (
+				0BBB43661E6A293900B84B0D /* FetchData.h */,
+				0BBB43671E6A293900B84B0D /* FetchData.m */,
+				0B98F7FF1E6E0DE4004FAC78 /* FetchFlickrData.h */,
+				0B98F8001E6E0DE4004FAC78 /* FetchFlickrData.m */,
+			);
+			name = NotUsed;
+			sourceTree = "<group>";
+		};
 		0BB146B31E69FBBA000C37B2 = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +114,8 @@
 				0BBB43691E6A2E7D00B84B0D /* TopPlacesTVC.h */,
 				0BBB436A1E6A2E7D00B84B0D /* TopPlacesTVC.m */,
 				0BB146C81E69FBBA000C37B2 /* Main.storyboard */,
+				0B98F80D1E70D2FA004FAC78 /* TopPlaceImageVC.h */,
+				0B98F80E1E70D2FA004FAC78 /* TopPlaceImageVC.m */,
 				0BBB43761E6A315E00B84B0D /* Views */,
 				0BB146E31E6A19C4000C37B2 /* Model */,
 				0BB146DF1E69FC99000C37B2 /* Core Data Model */,
@@ -138,12 +154,9 @@
 		0BB146E31E6A19C4000C37B2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0B98F80C1E70D209004FAC78 /* NotUsed */,
 				0B98F8031E709D45004FAC78 /* Importer.h */,
 				0B98F8041E709D45004FAC78 /* Importer.m */,
-				0BBB43661E6A293900B84B0D /* FetchData.h */,
-				0BBB43671E6A293900B84B0D /* FetchData.m */,
-				0B98F7FF1E6E0DE4004FAC78 /* FetchFlickrData.h */,
-				0B98F8001E6E0DE4004FAC78 /* FetchFlickrData.m */,
 				0B98F8091E70A881004FAC78 /* FetchTopPlaces.h */,
 				0B98F80A1E70A881004FAC78 /* FetchTopPlaces.m */,
 				0BB146E01E6A19BD000C37B2 /* FlickrURL.h */,
@@ -249,6 +262,7 @@
 				0B98F8051E709D45004FAC78 /* Importer.m in Sources */,
 				0B98F7FA1E6DF168004FAC78 /* FetchedResultsControllerDataSource.m in Sources */,
 				0B99CEA61E6A3B56003F59DA /* Place+CoreDataProperties.m in Sources */,
+				0B98F80F1E70D2FA004FAC78 /* TopPlaceImageVC.m in Sources */,
 				0BBB436B1E6A2E7D00B84B0D /* TopPlacesTVC.m in Sources */,
 				0BB146CD1E69FBBA000C37B2 /* FlickrRESTPractice.xcdatamodeld in Sources */,
 			);

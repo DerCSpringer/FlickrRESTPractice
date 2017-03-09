@@ -43,7 +43,6 @@ static NSString *const PlaceCellIdentifier = @"PhotoCell";
     self.dataSource.fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:request managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:nil];
     self.dataSource.reuseIdentifier = PlaceCellIdentifier;
     
-    
 }
 
 - (void)didReceiveMemoryWarning {
