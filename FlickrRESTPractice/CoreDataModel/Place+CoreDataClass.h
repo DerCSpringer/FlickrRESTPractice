@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Place : NSManagedObject
 + (instancetype)insertNewObjectIntoContext:(NSManagedObjectContext *)context;
-+ (void)insertNewObjectsFromFlickr:(NSDictionary *)results andPhotoData:(NSData *)data intoContext:(NSManagedObjectContext *)context;
++ (void)insertNewObjectsFromFlickr:(NSDictionary *)results andPhotoData:(NSData *)data withPhotoURL:(NSString *)urlString intoContext:(NSManagedObjectContext *)context;
 
 @end
 

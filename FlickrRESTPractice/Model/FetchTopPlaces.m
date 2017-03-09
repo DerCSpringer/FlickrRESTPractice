@@ -32,30 +32,45 @@
       }] resume];
 }
 
-- (void)fetchPhotoDataForPlace:(NSDictionary *)place callback:(void (^)(NSData *place))callback {
+- (void)fetchPhotoDataForPlace:(NSDictionary *)place callback:(void (^)(NSData *place, NSString *fullSizePhotoURL))callback {
     NSURL *photoDictionaryURL = [FlickrURL URLforPhotosInPlace:[place valueForKey:FLICKR_PHOTO_PLACE_ID] maxResults:1];
     [[[NSURLSession sharedSession] dataTaskWithURL:photoDictionaryURL completionHandler:
+      ^(NSData *data, NSURLResponse *response, NSError *error) {
+          if (error) {
+              NSLog(@"error: %@", error.localizedDescription);
+              callback(nil, nil);
+              return;
+          }
+          NSError *jsonError = nil;
+          id result = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
+          if ([result isKindOfClass:[NSDictionary class]]) {
+              NSArray *photos = [result valueForKeyPath:FLICKR_RESULTS_PHOTOS];
+              NSURL *photoURL = [FlickrURL URLforPhoto:photos[0] format:FlickrPhotoFormatSquare];
+              NSString *fullSizePhotoURL = [[FlickrURL URLforPhoto:photos[0] format:FlickrPhotoFormatLarge] absoluteString];
+              [[[NSURLSession sharedSession] dataTaskWithURL:photoURL completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+                  if (error) {
+                      NSLog(@"error: %@", error.localizedDescription);
+                      callback(nil, nil);
+                      return;
+                  }
+                  callback(data, fullSizePhotoURL);
+              }] resume];
+          }
+      }] resume];
+}
+
+- (void)fetchPhotoAt:(NSString *)photoURL callback:(void (^)(NSData *photo))callback {
+    NSURL *url = [NSURL URLWithString:photoURL];
+    [[[NSURLSession sharedSession] dataTaskWithURL:url completionHandler:
       ^(NSData *data, NSURLResponse *response, NSError *error) {
           if (error) {
               NSLog(@"error: %@", error.localizedDescription);
               callback(nil);
               return;
           }
-          NSError *jsonError = nil;
-          id result = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
-          if ([result isKindOfClass:[NSDictionary class]]) {
-              NSURL *photoURL = [FlickrURL URLforPhoto:[result valueForKeyPath:FLICKR_RESULTS_PHOTOS][0] format:FlickrPhotoFormatSquare];
-              [[[NSURLSession sharedSession] dataTaskWithURL:photoURL completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-                  if (error) {
-                      NSLog(@"error: %@", error.localizedDescription);
-                      callback(nil);
-                      return;
-                  }
-                  callback(data);
-              }] resume];
-              //callback(data);
-          }
+              callback(data);
       }] resume];
 }
+
 
 @end

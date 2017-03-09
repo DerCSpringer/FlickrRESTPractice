@@ -14,11 +14,13 @@
 #import "PlaceCell.h"
 #import "PlaceCell+ConfigureForPlace.h"
 #import "FlickrKeys.h"
+#import "TopPlaceImageVC.h"
+#import "TopPlaceImageVC.h"
 
 static NSString *const PlaceCellIdentifier = @"PhotoCell";
 
 
-@interface TopPlacesTVC ()<FetchedResultsControllerDataSourceDelegate>
+@interface TopPlacesTVC ()<FetchedResultsControllerDataSourceDelegate, UITableViewDelegate>
 
 @property NSDictionary* data;
 @property NSManagedObjectContext *managedObjectContext;
@@ -55,15 +57,25 @@ static NSString *const PlaceCellIdentifier = @"PhotoCell";
     [theCell configureForPlace:object];
 }
 
+#pragma mark UITableViewDelegate
 
-/*
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self performSegueWithIdentifier:@"Photo" sender:indexPath];
+}
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(NSIndexPath *)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"Photo"]) {
+        TopPlaceImageVC *tpivc = [segue destinationViewController];
+        Place *place = [self.dataSource.fetchedResultsController objectAtIndexPath:sender];
+        tpivc.imageURLToDisplay = place.fullSizePhotoURL;
+    }
+    
 }
-*/
 
 @end

@@ -10,6 +10,6 @@
 
 @interface TopPlaceImageVC : UIViewController
 
-@property (nonatomic) UIImage *imageToDisplay;
+@property (nonatomic) NSString *imageURLToDisplay;
 
 @end

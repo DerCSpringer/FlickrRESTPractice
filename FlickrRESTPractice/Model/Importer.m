@@ -36,8 +36,8 @@
          [self.context performBlock:^
           {
               for(NSDictionary *placeInfo in places) {
-                  [self.fetch fetchPhotoDataForPlace:placeInfo callback:^(NSData *placePhoto) {
-                      [Place insertNewObjectsFromFlickr:placeInfo andPhotoData:placePhoto intoContext:self.context];
+                  [self.fetch fetchPhotoDataForPlace:placeInfo callback:^(NSData *placePhoto, NSString *fullSizePhotoURL) {
+                      [Place insertNewObjectsFromFlickr:placeInfo andPhotoData:placePhoto withPhotoURL:fullSizePhotoURL intoContext:self.context];
                   }];
               }
                   NSError *error = nil;
