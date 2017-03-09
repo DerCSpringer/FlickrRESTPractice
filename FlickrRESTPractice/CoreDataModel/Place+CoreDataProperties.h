@@ -20,7 +20,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, copy) NSString *fullSizePhotoURL;
 @property (nullable, nonatomic, copy) NSData *thumbnailData;
 
-
 @end
 
 NS_ASSUME_NONNULL_END
