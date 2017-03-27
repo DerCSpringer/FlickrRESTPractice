@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0B98F7FA1E6DF168004FAC78 /* FetchedResultsControllerDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B98F7F91E6DF168004FAC78 /* FetchedResultsControllerDataSource.m */; };
-		0B98F8011E6E0DE4004FAC78 /* FetchFlickrData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B98F8001E6E0DE4004FAC78 /* FetchFlickrData.m */; };
 		0B98F8051E709D45004FAC78 /* Importer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B98F8041E709D45004FAC78 /* Importer.m */; };
 		0B98F8081E70A236004FAC78 /* PlaceCell+ConfigureForPlace.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B98F8071E70A236004FAC78 /* PlaceCell+ConfigureForPlace.m */; };
 		0B98F80B1E70A881004FAC78 /* FetchTopPlaces.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B98F80A1E70A881004FAC78 /* FetchTopPlaces.m */; };
@@ -23,7 +22,6 @@
 		0BB146D21E69FBBA000C37B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BB146D01E69FBBA000C37B2 /* LaunchScreen.storyboard */; };
 		0BB146E21E6A19BD000C37B2 /* FlickrURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BB146E11E6A19BD000C37B2 /* FlickrURL.m */; };
 		0BBB43651E6A263B00B84B0D /* ToDo.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 0BBB43641E6A263B00B84B0D /* ToDo.rtf */; };
-		0BBB43681E6A293900B84B0D /* FetchData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BBB43671E6A293900B84B0D /* FetchData.m */; };
 		0BBB436B1E6A2E7D00B84B0D /* TopPlacesTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BBB436A1E6A2E7D00B84B0D /* TopPlacesTVC.m */; };
 		0BBB43741E6A315400B84B0D /* PlaceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BBB43721E6A315400B84B0D /* PlaceCell.m */; };
 		0BBB43751E6A315400B84B0D /* PlaceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BBB43731E6A315400B84B0D /* PlaceCell.xib */; };
@@ -32,8 +30,6 @@
 /* Begin PBXFileReference section */
 		0B98F7F81E6DF168004FAC78 /* FetchedResultsControllerDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FetchedResultsControllerDataSource.h; path = CoreDataModel/FetchedResultsControllerDataSource.h; sourceTree = "<group>"; };
 		0B98F7F91E6DF168004FAC78 /* FetchedResultsControllerDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FetchedResultsControllerDataSource.m; path = CoreDataModel/FetchedResultsControllerDataSource.m; sourceTree = "<group>"; };
-		0B98F7FF1E6E0DE4004FAC78 /* FetchFlickrData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FetchFlickrData.h; path = Model/FetchFlickrData.h; sourceTree = "<group>"; };
-		0B98F8001E6E0DE4004FAC78 /* FetchFlickrData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FetchFlickrData.m; path = Model/FetchFlickrData.m; sourceTree = "<group>"; };
 		0B98F8031E709D45004FAC78 /* Importer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Importer.h; path = Model/Importer.h; sourceTree = "<group>"; };
 		0B98F8041E709D45004FAC78 /* Importer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Importer.m; path = Model/Importer.m; sourceTree = "<group>"; };
 		0B98F8061E70A236004FAC78 /* PlaceCell+ConfigureForPlace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "PlaceCell+ConfigureForPlace.h"; path = "Views/PlaceCell+ConfigureForPlace.h"; sourceTree = "<group>"; };
@@ -59,8 +55,6 @@
 		0BB146E01E6A19BD000C37B2 /* FlickrURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlickrURL.h; path = Model/FlickrURL.h; sourceTree = "<group>"; };
 		0BB146E11E6A19BD000C37B2 /* FlickrURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FlickrURL.m; path = Model/FlickrURL.m; sourceTree = "<group>"; };
 		0BBB43641E6A263B00B84B0D /* ToDo.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = ToDo.rtf; sourceTree = "<group>"; };
-		0BBB43661E6A293900B84B0D /* FetchData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FetchData.h; path = Model/FetchData.h; sourceTree = "<group>"; };
-		0BBB43671E6A293900B84B0D /* FetchData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FetchData.m; path = Model/FetchData.m; sourceTree = "<group>"; };
 		0BBB43691E6A2E7D00B84B0D /* TopPlacesTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopPlacesTVC.h; sourceTree = "<group>"; };
 		0BBB436A1E6A2E7D00B84B0D /* TopPlacesTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopPlacesTVC.m; sourceTree = "<group>"; };
 		0BBB43711E6A315400B84B0D /* PlaceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlaceCell.h; path = Views/PlaceCell.h; sourceTree = "<group>"; };
@@ -79,17 +73,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0B98F80C1E70D209004FAC78 /* NotUsed */ = {
-			isa = PBXGroup;
-			children = (
-				0BBB43661E6A293900B84B0D /* FetchData.h */,
-				0BBB43671E6A293900B84B0D /* FetchData.m */,
-				0B98F7FF1E6E0DE4004FAC78 /* FetchFlickrData.h */,
-				0B98F8001E6E0DE4004FAC78 /* FetchFlickrData.m */,
-			);
-			name = NotUsed;
-			sourceTree = "<group>";
-		};
 		0BB146B31E69FBBA000C37B2 = {
 			isa = PBXGroup;
 			children = (
@@ -154,7 +137,6 @@
 		0BB146E31E6A19C4000C37B2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0B98F80C1E70D209004FAC78 /* NotUsed */,
 				0B98F8031E709D45004FAC78 /* Importer.h */,
 				0B98F8041E709D45004FAC78 /* Importer.m */,
 				0B98F8091E70A881004FAC78 /* FetchTopPlaces.h */,
@@ -250,8 +232,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B98F8011E6E0DE4004FAC78 /* FetchFlickrData.m in Sources */,
-				0BBB43681E6A293900B84B0D /* FetchData.m in Sources */,
 				0B98F80B1E70A881004FAC78 /* FetchTopPlaces.m in Sources */,
 				0B98F8081E70A236004FAC78 /* PlaceCell+ConfigureForPlace.m in Sources */,
 				0BB146E21E6A19BD000C37B2 /* FlickrURL.m in Sources */,
