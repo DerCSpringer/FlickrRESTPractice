@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "FetchData.h"
 
 
 @interface TopPlacesTVC : UITableViewController

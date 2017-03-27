@@ -43,10 +43,13 @@
           }
           NSError *jsonError = nil;
           id result = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
-          if ([result isKindOfClass:[NSDictionary class]]) {
+          NSNumber *code = [result valueForKey:@"code"];
+          long longCode = code.longValue;
+          if ([result isKindOfClass:[NSDictionary class]] &&  longCode != 8) {
               NSArray *photos = [result valueForKeyPath:FLICKR_RESULTS_PHOTOS];
               NSURL *photoURL = [FlickrURL URLforPhoto:photos[0] format:FlickrPhotoFormatSquare];
               NSString *fullSizePhotoURL = [[FlickrURL URLforPhoto:photos[0] format:FlickrPhotoFormatLarge] absoluteString];
+              
               [[[NSURLSession sharedSession] dataTaskWithURL:photoURL completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
                   if (error) {
                       NSLog(@"error: %@", error.localizedDescription);
