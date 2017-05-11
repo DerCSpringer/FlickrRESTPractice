@@ -7,7 +7,7 @@ This app is meant to be an example of the core concepts needed to develop iOS ap
 * view controllers and their lifecycle
 * the view hierarchy
 * storyboards
-* nibs
+* xibs
 * basics of Auto Layout
 * outlets and the target-action pattern
 * communication between view controllers and delegation
